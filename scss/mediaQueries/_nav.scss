@@ -1,0 +1,73 @@
+@media(min-width: 769px) {
+    nav {
+        width: 100%;
+        margin-top: 40px;
+        @include flex(row, space-between, center);
+
+        .navigation {
+            width: 30%;
+            position: static;
+            padding: 0;
+            @include flex(row, space-between, center);
+
+            .brandName {
+                @include flex(row, flex-start, center);
+
+                h1 {
+                    @include fontDeclaration($openSans, 27px, 800, $fontMainColor);
+                    margin-left: 15px;
+                }
+            }
+
+            .hamburger {
+                display: none;
+            }
+        }
+
+        .listContainer {
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+
+            ul {
+                @include fontDeclaration($openSans, 15px, 400, $fontLightColor);
+
+                li {
+                    display: inline-block;
+                    margin: 0 20px;
+
+                    a {
+                        text-decoration: none;
+                        color: $fontLightColor;
+                    }
+                }
+            }
+
+            ul.registerLoginUl {
+                font-weight: 800;
+
+                li.login {
+                    a {
+                        color: $fontMainColor;
+                    }
+                }
+
+                li.register {
+                    a {
+                        color: $fontHighlightColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 769px) and (max-width: 860px) {
+    nav {
+        .listContainer {
+            ul {
+                font-size: 12px;
+            }
+        }
+    }
+}

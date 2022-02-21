@@ -1,0 +1,78 @@
+footer {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3.125rem;
+
+    .container:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 9.375rem;
+
+        .top {
+            width: 100%;
+            height: 100%;
+
+            .columns {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .logoCol {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 5.6875rem;
+                        height: 5.375rem;
+                        margin-right: 1.25rem;
+                    }
+
+                    @include fontDeclaration($openSans, 1.25rem, 800, $fontMainColor);
+                }
+
+                .navCol {
+                    display: none;
+                }
+
+                .socialCol {
+                    .container {
+                        margin-top: -6.25rem;
+
+                        .topCol {
+                            i {
+                                font-size: 2rem;
+                                margin-left: .9375rem;
+                                margin-right: .9375rem;
+                                color: $fontLightColor;
+                                cursor: pointer;
+                                transition: .4s;
+                            }
+
+                            i:hover {
+                                color: $fontHighlightColor;
+                            }
+                        }
+
+                        .bottomCol {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 3.125rem;
+
+            p {
+                @include fontDeclaration($openSans, 1.125rem, 400, $fontMainColor);
+            }
+        }
+    }
+}

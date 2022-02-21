@@ -1,0 +1,405 @@
+@media(min-width: 769px) {
+    main {
+        width: 100%;
+        height: 100%;
+        @include flex(row, flex-start, flex-start);
+
+        aside.left {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 38%;
+            height: 100%;
+
+            .desktopMobileApp {
+                display: block;
+
+                .buttonsArea {
+                    width: 80%;
+                    height: 2.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 3.4375rem;
+
+                    button {
+                        width: 15.625rem;
+                        line-height: 2.8125rem;
+                        text-align: center;
+                        @include fontDeclaration($openSans, 1rem, 800, #fff);
+                        background-color: $fontMainColor;
+                        border-radius: .625rem;
+                        border: none;
+                        cursor: pointer;
+                        transition: .4s;
+                    }
+
+                    button:hover {
+                        box-shadow: .1875rem .1875rem .8125rem .1875rem rgba($color: #000000, $alpha: 0.2);
+                    }
+
+                    .stores {
+                        width: 20%;
+                        height: 2.5rem;
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            color: $fontMainColor;
+                            font-size: 2rem;
+                            margin: 0 1.25rem;
+                            cursor: pointer;
+                        }
+
+                        img {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 10.9375rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+
+                    span {
+                        color: $fontHighlightColor;
+                    }
+                }
+            }
+        }
+
+        aside.right {
+            width: 62%;
+            height: 100%;
+
+            .nutritionalInformation {
+                top: 10%;
+                left: 40%;
+                border-radius: .625rem;
+
+                @media(max-width: 1380px) {
+                    left: 30%;
+                    top: 12%;
+                }
+
+                @media(max-width: 1240px) {
+                    top: 17%;
+                    left: 37%;
+                }
+            }
+
+            img {
+                top: 27%;
+                right: 6%;
+                left: auto;
+                width: 288px;
+                height: 624px;
+
+                @media(max-width: 1460px) {
+                    width: 258px;
+                    height: 524px;
+                    right: 0;
+                }
+
+                @media(max-width: 1380px) {
+                    left: 45%;
+                }
+
+                @media(max-width: 1240px) {
+                    width: 200px;
+                    height: 460px;
+                    left: 55%;
+                    top: 40%;
+                }
+            }
+
+            .circle {
+                width: 409px;
+                height: 409px;
+                left: 5%;
+
+                @media(max-width: 1380px) {
+                    width: 309px;
+                    height: 309px;
+                    left: 8%;
+                }
+
+                img {
+                    width: 18rem;
+                    height: 38.9375rem;
+
+                    @media(max-width: 1460px) {
+                        width: 258px;
+                        height: 524px;
+                    }
+
+                    @media(max-width: 1240px) {
+                        width: 200px;
+                        height: 460px;
+                    }
+                }
+            }
+
+            .weekResults {
+                position: absolute;
+                top: 75%;
+                left: 60%;
+                width: 25rem;
+                height: 12.5rem;
+                background-color: #fff;
+                box-shadow: .1875rem .1875rem .8125rem .1875rem rgba($color: #000000, $alpha: 0.1);
+                border-radius: .625rem;
+
+                @media(max-width: 1380px) {
+                    width: 350px;
+                    height: 200px;
+                }
+
+                @media(min-width: 769px) and (max-width: 1240px) {
+                    display: none;
+                }
+
+                .weekResultsContainer {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .pagination {
+                        width: 100%;
+                        height: 1.875rem;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-right: 1.25rem;
+
+                        span.dot {
+                            width: .375rem;
+                            height: .375rem;
+                            display: block;
+                            border-radius: 50%;
+                            background-color: $fontLightColor;
+                            margin: 1.25rem .3125rem;
+                        }
+
+                        span.dot.active {
+                            background-color: $fontMainColor;
+                        }
+                    }
+
+                    .result {
+                        padding-top: 1.25rem;
+                        flex-grow: 1;
+                        width: 100%;
+
+                        .tab {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            display: none;
+
+                            .left {
+                                width: 50%;
+                                height: 100%;
+                                padding-left: 1.875rem;
+
+                                h1 {
+                                    @include fontDeclaration($openSans, .75rem, 800, $fontMainColor)
+                                }
+
+                                .columns {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    margin-top: 1.25rem;
+
+                                    .col {
+                                        width: 45%;
+                                        height: 100%;
+
+                                        p {
+                                            @include fontDeclaration($openSans, .6875rem, 400, $fontLightColor);
+                                        }
+
+                                        h2 {
+                                            @include fontDeclaration($openSans, 1rem, 800, $fontHighlightColor);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .right {
+                                position: relative;
+                                width: 50%;
+                                height: calc(100% - 3.125rem);
+
+                                .progressBar {
+                                    width: 100%;
+                                    height: 100%;
+
+                                    .percent {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 50%;
+
+                                        .desktopCircle {
+                                            display: block;
+
+                                            @media(max-width: 1240px) {
+                                                display: none;
+                                            }
+
+                                            svg {
+                                                width: 100px;
+                                                height: 100px;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 50%;
+                                                transform: translate(-2.5rem, 0);
+
+                                                circle {
+                                                    fill: none;
+                                                    stroke: $fontHighlightColor;
+                                                    stroke-width: 5;
+                                                    transform: translate(.3125rem, .3125rem);
+                                                    stroke-dasharray: 100;
+                                                    stroke-dashoffset: 10;
+                                                }
+
+                                                circle:nth-child(1) {
+                                                    stroke: #DCEBF5;
+                                                    stroke-dashoffset: 110;
+                                                }
+                                            }
+                                        }
+
+                                        .mobileCircle {
+                                            display: none;
+
+                                            @media(max-width: 1240px) {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+
+                                    .title {
+                                        width: 6.25rem;
+                                        height: 6.25rem;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: absolute;
+                                        left: 55%;
+                                        transform: translate(-50%, 0);
+                                        text-align: center;
+
+                                        span {
+                                            display: block;
+                                        }
+
+                                        h2 {
+                                            @include fontDeclaration($openSans, .8125rem, 800, $fontMainColor)
+                                        }
+                                    }
+                                }
+
+                                p.knowMore {
+                                    @include fontDeclaration($openSans, .6875rem, 400, $fontMainColor);
+                                    position: absolute;
+                                    bottom: 1.25rem;
+                                    margin-left: 1.25rem;
+
+                                    span {
+                                        color: $fontHighlightColor;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+
+                        .tab.active {
+                            display: flex;
+                        }
+                    }
+
+                    .arrowSection {
+                        width: 100%;
+                        height: 1.875rem;
+
+                        .nextBtn,
+                        .prevBtn {
+                            position: absolute;
+                            width: 3.125rem;
+                            height: 3.125rem;
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #fff;
+                            box-shadow: .1875rem .1875rem .8125rem .1875rem rgba($color: #000000, $alpha: 0.1);
+                            border-radius: 50%;
+                            left: -0.3125rem;
+                            bottom: -0.3125rem;
+                            cursor: pointer;
+
+                            i {
+                                color: $fontMainColor;
+                            }
+                        }
+
+                        .nextBtn.active,
+                        .prevBtn.active {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    section.mobileAppButtons {
+        display: none;
+    }
+}
+
+@media(min-width: 411px) and (max-width: 540px) {
+    main {
+        // min-height: 130vh;
+
+        aside.right {
+            .circle {
+                background-color: red
+            }
+        }
+    }
+}
+
+@media(min-width: 541px) and (max-width: 768px) {
+    main {
+        // min-height: 130vh;
+
+        aside.right {
+            .circle {
+                width: 280px;
+                height: 280px;
+
+                img {
+                    width: 210px;
+                    height: 400px;
+                }
+            }
+
+            img {
+                width: 210px;
+                height: 400px;
+            }
+
+            .weekResults {
+                width: 300px;
+                bottom: -30%;
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+section.salads {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 6.25rem;
+
+    aside {
+        width: 100%;
+        height: 100%;
+    }
+
+    aside.left {
+        width: 100%;
+        height: 100%;
+
+        .leftContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .slider {
+                width: 306px;
+                height: 440px;
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                box-shadow: .1875rem .1875rem .8125rem .1875rem rgba($color: #000000, $alpha: 0.03);
+                border-radius: 50% 50% .625rem .0625rem;
+                margin-top: 10rem;
+
+                .imageSection {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100px;
+                    // background-color: red;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    img {
+                        // display: none;
+                        position: absolute;
+                        width: 220px;
+                        height: 220px;
+                        top: -70%;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                    }
+                }
+
+                .productInformationSection {
+                    width: 100%;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h2.productName {
+                        @include fontDeclaration($openSans, 2rem, 800, $fontMainColor);
+                        padding: .9375rem 0 0 2.5rem;
+                        line-height: 50px;
+
+                        span {
+                            display: block;
+                        }
+                    }
+
+                    .makros {
+                        .columns {
+                            width: 50%;
+                            height: 3.125rem;
+                            display: flex;
+                            justify-content: space-between;
+                            margin: .9375rem 0 0 2.5rem;
+                        }
+
+                        .col {
+                            h2 {
+                                @include fontDeclaration($openSans, 1.5rem, 800, $fontMainColor);
+                            }
+
+                            h2.active {
+                                color: $colorRed;
+                            }
+
+                            p {
+                                @include fontDeclaration($openSans, .8125rem, 400, $fontLightColor);
+                            }
+                        }
+                    }
+                }
+
+                .arrowSection {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3.125rem;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .arrow {
+                        position: absolute;
+                        bottom: -0.9375rem;
+                        right: -0.9375rem;
+                        width: 3.75rem;
+                        height: 3.75rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $fontMainColor;
+                        border-radius: 50%;
+                        cursor: pointer;
+
+                        .nextBtn {
+                            display: none;
+                            position: absolute;
+                            font-size: 1.75rem;
+                            color: #fff;
+                        }
+
+                        .prevBtn {
+                            display: none;
+                            position: absolute;
+                            font-size: 1.75rem;
+                            color: #fff;
+                        }
+
+                        .prevBtn.active,
+                        .nextBtn.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    aside.right {
+        width: 100%;
+        height: 100%;
+
+        .label {
+            width: 100%;
+
+            span {
+                width: 70px;
+                height: 8px;
+                display: block;
+                background-color: $fontMainColor;
+                border-radius: 20px;
+            }
+
+            h2 {
+                @include fontDeclaration($openSans, 45.6px, 800, $fontMainColor);
+                margin-top: 32px;
+
+                span {
+                    display: inline;
+                    border-radius: 0;
+                    color: $fontHighlightColor;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        p {
+            @include fontDeclaration($openSans, 14px, 400, $fontLightColor);
+            margin-top: 32px;
+            line-height: 25px;
+        }
+    }
+}

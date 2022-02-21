@@ -1,0 +1,119 @@
+section.conoceSection {
+    width: 100%;
+    height: 100%;
+    padding-top: 9.375rem;
+
+    aside {
+        width: 100%;
+        height: 100%;
+    }
+
+    aside.left {
+        .label {
+            width: 100%;
+
+            span {
+                width: 70px;
+                height: 8px;
+                display: block;
+                background-color: $fontMainColor;
+                border-radius: 20px;
+            }
+
+            h2 {
+                @include fontDeclaration($openSans, 45.6px, 800, $fontMainColor);
+                margin-top: 32px;
+
+                span {
+                    display: inline;
+                    border-radius: 0;
+                    color: $fontHighlightColor;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        p {
+            @include fontDeclaration($openSans, 14px, 400, $fontLightColor);
+            margin-top: 32px;
+            line-height: 25px;
+        }
+    }
+
+    aside.right {
+        .imageSection {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 3.125rem;
+
+            .nutritionalInformation {
+                position: absolute;
+                top: 52%;
+                z-index: 2;
+                width: 100%;
+                height: 6.875rem;
+                display: flex;
+                flex-direction: column;
+                border-radius: .625rem;
+                background-color: #fff;
+                box-shadow: .1875rem .1875rem .625rem .1875rem rgba($color: #000000, $alpha: 0.1);
+
+                .top {
+                    width: 100%;
+                    text-align: center;
+
+                    p {
+                        @include fontDeclaration($openSans, .75rem, 400, $fontMainColor);
+                        padding-top: .625rem;
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    margin-top: 1.25rem;
+
+                    .col {
+                        width: 25%;
+                        text-align: center;
+
+                        .topCol {
+                            p {
+                                @include fontDeclaration($openSans, .875rem, 800, $fontMainColor);
+                            }
+
+                            p.active {
+                                color: $colorRed;
+                            }
+                        }
+
+                        .bottomCol {
+                            p {
+                                @include fontDeclaration($openSans, .5625rem, 400, $fontLightColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .iconsArea {
+            width: 100%;
+            padding-top: 1.5625rem;
+
+            .container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                img {
+                    width: 4.0625rem;
+                    height: 4.0625rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@media (min-width: 1025px) {
+    section.salads {
+        flex-direction: row;
+
+        aside {
+            width: auto;
+            height: 100%;
+        }
+
+        aside.left {
+            width: 60%;
+
+            .leftContainer {
+                flex-direction: row;
+
+                .slider:nth-child(1) {
+                    position: relative;
+                    top: -200px;
+                }
+
+                .slider:nth-child(2) {
+                    position: relative;
+                    margin-left: 100px;
+                    top: -100px;
+                }
+            }
+        }
+
+        aside.right {
+            width: 40%;
+        }
+    }
+}

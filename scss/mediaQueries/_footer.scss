@@ -1,0 +1,74 @@
+@media(min-width: 1025px) {
+    footer {
+        .container:nth-child(1) {
+            flex-direction: column;
+
+            .top {
+                .columns {
+                    flex-direction: row;
+
+                    .col {
+                        width: 33.333%;
+                        min-height: 7.5rem;
+                        height: 100%;
+                    }
+
+                    .navCol {
+                        display: flex;
+                        justify-content: space-between;
+
+                        ul {
+                            li {
+                                @include fontDeclaration($openSans, .875rem, 400, $fontMainColor);
+                                margin-top: .9375rem;
+                                cursor: pointer;
+                                transition: .4s;
+                            }
+
+                            li.brandName {
+                                @include fontDeclaration($openSans, 1rem, 800, $fontHighlightColor);
+                            }
+
+                            li:hover {
+                                color: $fontHighlightColor;
+                            }
+                        }
+                    }
+
+                    .socialCol {
+
+                        .container {
+                            margin-top: 0;
+                            padding: 0;
+
+                            .topCol {
+                                padding-left: 3.125rem;
+                            }
+
+                            .bottomCol {
+                                display: block;
+                                padding-left: 4.0625rem;
+                                padding-top: 2.1875rem;
+
+                                p {
+                                    @include fontDeclaration($openSans, 1rem, 800, $fontMainColor);
+                                    width: 6.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                justify-content: flex-start;
+
+
+                p {
+                    font-size: 1rem;
+                    margin-top: 1.5625rem;
+                }
+            }
+        }
+    }
+}
